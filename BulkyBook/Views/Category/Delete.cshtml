@@ -1,0 +1,31 @@
+﻿@model Category
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 m-2 mx-auto">
+            <div class="card text-white bg-primary border-secondary mb-3">
+                <div class="card-header text-center"><h2>Add Category</h2></div>
+                <div class="card-body">
+                    <form method="post" asp-action="DeletePost">
+                        <input asp-for="ID" hidden>
+                        <div class="form-group">
+                            <label asp-for="name" class="form-label mt-4">Name</label>
+                            <input type="text" asp-for="name" class="form-control" placeholder="Enter Name" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="displayOrder" class="form-label mt-4">Display Order</label>
+                            <input type="text" asp-for="displayOrder" class="form-control" placeholder="Enter display Order" disabled>
+                        </div>
+                        <div class="d-flex mt-4 justify-content-between">
+                            <button type="submit" class="btn btn-secondary"><i class="bi bi-check-circle"></i> Delete</button>
+                            <a class="btn btn-warning" asp-controller="Category" asp-action="Index">
+                                <i class="bi bi-back"></i> 
+                                Back to list
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
